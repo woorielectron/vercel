@@ -10,7 +10,6 @@ export default function Home()
     router.push('/Board');
   }, [router])
 
-
   return (
     <>
 

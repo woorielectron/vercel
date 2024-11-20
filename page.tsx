@@ -1,4 +1,3 @@
-
 'use client'
 import Image from "next/image";
 import dice_logo from "../../image/logo.png";
@@ -20,15 +19,14 @@ import { useState } from "react";
 const blueArray: string[] = [dice_logo, blue1, blue2, blue3, blue4, blue5, blue6];
 const redArray: string[] = [dice_logo, red1, red2, red3, red4, red5, red6];
 const colorArray = [redArray, blueArray];
-const RED: number = 0;
-const BLUE: number = 1;
+
 interface MyProps
 {
     name: string;
     color: number;
 }
 
-function Home(props: MyProps)
+export default function Home(props: MyProps)
 {
     const [num, setNum] = useState<number>(1);
     const [history, setHistory] = useState<number[]>([])
@@ -51,23 +49,4 @@ function Home(props: MyProps)
             </div>
         </>
     )
-}
-
-
-export default function Layout({ children }: { children: React.ReactNode })
-{
-    return (
-        <>
-            <h1>hello</h1>
-            <div>
-                <Home name="내꺼" color={RED}></Home>
-            </div>
-
-            <div>
-                <Home name="니꺼" color={BLUE}></Home>
-            </div>
-            {children}
-        </>
-    )
-
 }
