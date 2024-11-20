@@ -19,8 +19,7 @@ import { useState } from "react";
 const blueArray: string[] = [dice_logo, blue1, blue2, blue3, blue4, blue5, blue6];
 const redArray: string[] = [dice_logo, red1, red2, red3, red4, red5, red6];
 const colorArray = [redArray, blueArray];
-let num: number = 0;
-let color: string[] = []
+
 
 interface MyProps
 {
@@ -28,7 +27,7 @@ interface MyProps
     color: number;
 }
 
-function Board(props: MyProps)
+export default function Board(props: MyProps)
 {
     const [num, setNum] = useState<number>(1);
     const [history, setHistory] = useState<number[]>([])
@@ -52,4 +51,3 @@ function Board(props: MyProps)
         </>
     )
 }
-export default Board;

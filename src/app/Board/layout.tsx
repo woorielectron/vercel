@@ -12,6 +12,7 @@ export default function BoardLayout()
             <div>
                 <Board name="니꺼" color={BLUE}></Board>
             </div>
+
         </>
     )
 }
